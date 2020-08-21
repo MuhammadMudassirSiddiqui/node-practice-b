@@ -10,7 +10,7 @@ hbs.registerPartials(__dirname + '/views/partials')
 hbs.registerHelper('getnow', () => {
     return new Date().getHours() + ':' + new Date().getMinutes() + ':' + new Date().getSeconds() + new Date().toDateString()
 })
-var port = process.env.port || 4000
+var port = process.env.PORT || 4000
 
 app.get('/', (req, res) => {
     res.render('home', {
